@@ -12,7 +12,9 @@ export default class listTemplate implements DOMList{
         this.ul = document.getElementById('listItems') as HTMLUListElement
     }
     clear(): void {
-        this.ul.innerHTML = ''
+        console.log('clearing listttt');
+        
+        this.ul.innerHTML = '';
     }
 
     render(fullList: FullList): void {
@@ -24,7 +26,7 @@ export default class listTemplate implements DOMList{
             li.className = 'item'
 
             const check = document.createElement('input') as HTMLInputElement
-            check.type = 'checkout'
+            check.type = 'checkbox'
             check.id = item.id
             check.tabIndex = 0
             check.checked = item.checked

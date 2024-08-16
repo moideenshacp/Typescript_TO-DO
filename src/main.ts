@@ -28,6 +28,7 @@ const initApp = ():void=>{
 
   clearItems.addEventListener('click',():void=>{
     fullList.clearlist()
+    template.render(fullList)
   })
 
   fullList.load()
